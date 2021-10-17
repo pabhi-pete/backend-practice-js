@@ -9,10 +9,12 @@ app.get("/url", (req, res, next) => {
 });
 
 app.get("/recipes", (req, res, next) => {
+    // original simple way
     // var result = data.recipes.map(function (recipe) {
     //     return recipe.name;
     // });
     // res.json(result);
+
     console.log(DB);
     var recipes = DB.all();
     var recipeNames = recipes.map(recipe => recipe.name);
